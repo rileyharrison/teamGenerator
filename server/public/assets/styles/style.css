@@ -1,3 +1,36 @@
 .my-button:hover{
     background-color: #888888;
 }
+.my-group{
+    display: inline-block;
+     width: 25%;
+     height: 30%;
+     vertical-align:top;
+
+
+
+}
+.students-container{
+
+}
+.my-button {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 30px;
+    margin: 5px;
+}
+.my-refresh {
+    width: 150px;
+    height: 80px;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 30px;
+    margin: 5px;
+
+}
+body{
+    font-size: 30px;
+    font-family: sans-serif;
+}
