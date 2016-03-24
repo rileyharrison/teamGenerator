@@ -13,6 +13,9 @@
   <body>
     <h1>Random Team Generator</h1>
     <div ng-controller="MainController" class="container">
+        <p class = "num-label">
+            Number of Groups:
+        </p>
       <div class="teamButtons">
           <button class = "my-button no-animate" ng-repeat="i in studentArray | limitTo: (studentArray.length/ 2)-1" ng-click="assignNumGroups($index+1)">{{studentArray.indexOf(i) +1}}</button>
 
