@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-animate.js"></script>
+
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
     <link rel="stylesheet" href="/assets/styles/style.css" />
 
@@ -12,7 +14,7 @@
     <h1>Random Team Generator</h1>
     <div ng-controller="MainController" class="container">
       <div class="teamButtons">
-          <button class = "my-button" ng-repeat="i in studentArray | limitTo: studentArray.length / 2" ng-click="assignNumGroups($index+1)">{{studentArray.indexOf(i) +1}}</button>
+          <button class = "my-button no-animate" ng-repeat="i in studentArray | limitTo: (studentArray.length/ 2)-1" ng-click="assignNumGroups($index+1)">{{studentArray.indexOf(i) +1}}</button>
 
           <!-- <button ng-click="assignNumGroups(1)">1</button>
           <button ng-click="assignNumGroups(2)">2</button>
@@ -27,7 +29,7 @@
       <div class = "students-container">
 
 
-      <div class = "my-group" ng-repeat="group in groupArray">
+      <div class = "my-group no-animate" ng-repeat="group in groupArray" ng-animate-children>
         <h2>Group {{groupArray.indexOf(group) + 1}} </h2>
         <div ng-repeat="student in group">
             <p>{{student.name}}</p>
